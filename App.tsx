@@ -1,20 +1,46 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View, Button, Image } from 'react-native';
+import { styles } from './Styles/Styles';
+import { Input } from './Shared/Input/Input';
+import { Colors } from './Constants/Colors';
+import { ButtonLink } from './Shared/ButtonLink/ButtonLink';
+import { EyeClosed } from './assets/EyeClosed';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <View>
+        <Image source={require('./assets/favicon.png')} style={styles.logo}
+        resizeMode='center'
+        />
+        <Text style={styles.textContainer}>Мое первое приложение</Text>
+        <Input 
+          style={styles.inputContainer}
+          textContentType='emailAddress'
+          cursorColor={Colors.caretColor}
+          placeholder='Email'
+          placeholderTextColor={Colors.placeholderColor}
+        />
+        <Input 
+          style={styles.inputContainer}
+          textContentType='password'
+          secureTextEntry
+          placeholder='Password'
+          placeholderTextColor={Colors.placeholderColor}
+        />
+        <Button title="Войти в приложение" onPress={() => {
+          alert('Кнопка нажата');
+        }} />
+        <ButtonLink title='восстановить пароль'
+        style={styles.buttonLink} 
+        onPress={() => {
+          alert('Кнопка восстановить пароль');
+        }} />
+        <EyeClosed />
+      </View>
+      <StatusBar style="inverted" />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
