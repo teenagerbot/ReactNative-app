@@ -24,7 +24,8 @@ export const styles = StyleSheet.create({
     backgroundColor: '#3b1f6b',
     borderRadius: 10,
     paddingLeft: 10,
-    paddingRight: 10
+    paddingRight: 10,
+    paddingRight: 40
   },
   logo: {
     width: 100
@@ -34,5 +35,11 @@ export const styles = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     textAlign: 'center',
+  },
+  eyeIcon: {
+    position: 'absolute',
+    right: 0,
+    paddingHorizontal: 10,
+    paddingVertical: 7
   }
 });

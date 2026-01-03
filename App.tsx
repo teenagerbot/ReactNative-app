@@ -20,6 +20,7 @@ export default function App() {
           cursorColor={Colors.caretColor}
           placeholder='Email'
           placeholderTextColor={Colors.placeholderColor}
+          isPassword={false}
         />
         <Input 
           style={styles.inputContainer}
