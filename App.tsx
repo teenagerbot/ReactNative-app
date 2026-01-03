@@ -24,9 +24,9 @@ export default function App() {
         <Input 
           style={styles.inputContainer}
           textContentType='password'
-          secureTextEntry
           placeholder='Password'
           placeholderTextColor={Colors.placeholderColor}
+          isPassword
         />
         <Button title="Войти в приложение" onPress={() => {
           alert('Кнопка нажата');
@@ -36,7 +36,6 @@ export default function App() {
         onPress={() => {
           alert('Кнопка восстановить пароль');
         }} />
-        <EyeClosed />
       </View>
       <StatusBar style="inverted" />
     </View>
